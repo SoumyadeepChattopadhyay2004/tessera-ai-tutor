@@ -1,0 +1,13 @@
+{
+  "name": "tessera",
+  "version": "1.0.0",
+  "description": "AI learning companion that tests understanding, connections and transfer, not memorisation.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

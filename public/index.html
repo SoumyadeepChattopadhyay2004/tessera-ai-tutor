@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tessera — learn to understand, not memorise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Tessera<span>.</span></h1>
+      <div class="tag">Learn to <b>understand</b>, <b>connect</b> and <b>apply</b> — not memorise.</div>
+    </div>
+    <button id="reset" style="display:none">New topic</button>
+  </header>
+
+  <section id="setup" class="card">
+    <h3>What do you want to truly understand?</h3>
+    <p class="small mut">Tessera turns any topic (or your own notes) into a concept map, then tests <i>understanding</i> three ways: teach it to a curious kid, explain how ideas connect, and apply it to a situation you've never seen. It diagnoses your misconceptions and remembers them.</p>
+    <input id="topic" placeholder="e.g. Photosynthesis, Supply &amp; demand, Recursion, The French Revolution">
+    <div class="row">
+      <select id="lvl">
+        <option>school beginner</option>
+        <option selected>college intermediate</option>
+        <option>advanced / professional</option>
+      </select>
+      <button class="p" id="go">Build my concept map</button>
+    </div>
+    <details>
+      <summary>Optional: paste your own notes / syllabus</summary>
+      <textarea id="notes" placeholder="Paste lecture notes or a textbook section — the map will be built from it."></textarea>
+    </details>
+    <div id="err" class="warn small"></div>
+  </section>
+
+  <div id="main" style="display:none">
+    <div class="grid">
+      <div>
+        <div class="card">
+          <div class="head">
+            <h3 id="title"></h3>
+            <div id="score" class="small mut"></div>
+          </div>
+          <svg id="g" viewBox="0 0 600 540" role="img" aria-label="Concept map"></svg>
+          <div class="legend">
+            <span><i style="background:var(--e)"></i>Explain</span>
+            <span><i style="background:var(--c)"></i>Connect</span>
+            <span><i style="background:var(--a)"></i>Apply</span>
+            <span>Dashed halo = suggested next step · ⚠ = open misconception</span>
+          </div>
+        </div>
+        <div class="card" style="margin-top:14px">
+          <h3>Misconception ledger</h3>
+          <div id="led"></div>
+        </div>
+      </div>
+      <div class="card" id="panel"></div>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
