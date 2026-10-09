@@ -106,23 +106,3 @@ Tessera is a plain Node app, so any host that runs Node works (Render, Railway, 
 3. Add `PROVIDER` and `GEMINI_API_KEY` as environment variables on the host. Do not set `PORT`; the host provides it.
 
 Note that visitors share your API quota, and free hosting tiers may sleep when idle.
-
-## 60-second demo
-
-1. Build a map for *Supply and demand*.
-2. Open **Explain** on a concept and give a shallow, jargon-heavy answer. Watch Pip ask the question that exposes the gap.
-3. Answer again properly, then see the score and the misconception ledger update.
-4. Switch to **Apply**, generate a fresh scenario, and solve it.
-5. Return to the map: the rings have filled, and the halo points to your next weakest concept.
-
-## Limitations and roadmap
-
-- Progress is stored in the browser (`localStorage`), so it does not sync across devices.
-- Grading quality depends on the underlying model, and free models can be less consistent. Retrying usually helps.
-- No accounts, and no teacher view yet.
-
-Planned next steps: spaced-repetition scheduling of weak rings, teacher dashboards for spotting class-wide misconceptions, uploading documents as source material, and voice-based teach-back.
-
-## License
-
-MIT
